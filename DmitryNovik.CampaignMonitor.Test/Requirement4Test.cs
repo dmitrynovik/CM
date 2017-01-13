@@ -36,11 +36,10 @@ namespace DmitryNovik.CampaignMonitor.Test
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void When_Array_IsNull_ArgumentNullException_IsThrown()
         {
             int[] input = null;
-            input.GetMostCommonElements();
+            Assert.Throws<ArgumentNullException>(() => input.GetMostCommonElements());
         }
     }
 }

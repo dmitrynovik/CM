@@ -8,19 +8,17 @@ namespace DmitryNovik.CampaignMonitor.Test
     public class NumberExtensionsTest
     {
         [Test]
-        [ExpectedException(typeof(ArgumentException))]
         public void When_Negative_Throws_ArgumentException()
         {
             int num = -1;
-            num.GetAllPositiveDivisors().ToList();
+            Assert.Throws<ArgumentException>(() => num.GetAllPositiveDivisors().ToArray());
         }
 
         [Test]
-        [ExpectedException(typeof(ArgumentException))]
         public void When_Zero_Throws_ArgumentException()
         {
             int num = 0;
-            num.GetAllPositiveDivisors().ToList();
+            Assert.Throws<ArgumentException>(() => num.GetAllPositiveDivisors().ToArray());
         }
 
         [Test]

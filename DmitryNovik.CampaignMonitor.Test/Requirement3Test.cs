@@ -6,17 +6,15 @@ namespace DmitryNovik.CampaignMonitor.Test
     public class TriangleTest
     {
         [Test]
-        [ExpectedException(typeof(InvalidTriangleException))]
         public void When_Edge_Non_Positive_Throws_Exception()
         {
-            Triangle.CalculateArea(0, 1, 2);
+            Assert.Throws<InvalidTriangleException>(() => Triangle.CalculateArea(0, 1, 2));
         }
 
         [Test]
-        [ExpectedException(typeof(InvalidTriangleException))]
         public void When_Triangle_Inequality_Broken_Throws_Exception()
         {
-            Triangle.CalculateArea(1, 1, 10);
+            Assert.Throws<InvalidTriangleException>(() => Triangle.CalculateArea(1, 1, 10));
         }
 
         [Test]
