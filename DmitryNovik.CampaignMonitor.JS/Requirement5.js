@@ -9,7 +9,7 @@ function endsWith(s, suffix) {
     if (suffix === null) return (s === null);
     if (s === null) return false;
     // a good case for code reuse:
-    return matchSubstring(s, suffix, s.length - suffix.length);
+    return (s && suffix) ? matchSubstring(s, suffix, s.length - suffix.length) : !suffix;
 }
 
 // add defined above function to String prototype:
@@ -21,7 +21,7 @@ function matchSubstring(s, substr, startPos) {
     if (substr.length > s.length) return false;
 
     for (var i = 0; i < substr.length; ++i)
-        if (substr.charAt(i) != s.charAt(startPos + i))
+        if (substr.charAt(i) !== s.charAt(startPos + i))
             return false;
 
     return true;
