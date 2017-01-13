@@ -20,7 +20,8 @@ namespace DmitryNovik.CampaignMonitor.Test
         [Test]
         public void When_Triangle_IsValid_TheArea_Is_Calculated_Correctly()
         {
-            Assert.AreEqual(6, Triangle.CalculateArea(3, 4, 5));
+            var result = Triangle.CalculateArea(3, 4, 5);
+            Assert.AreEqual(6, result);
         }
     }
 }

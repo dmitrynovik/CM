@@ -25,39 +25,54 @@ namespace DmitryNovik.CampaignMonitor.Test
         public void When_Prime_Returns_Only_1_And_Self()
         {
             int num = 13;
-            var result = num.GetAllPositiveDivisors().ToArray();
-            Assert.Contains(1, result);
-            Assert.Contains(13, result);
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new [] {1, 13 }));
         }
 
         [Test]
         public void When_Even_And_Positive_Returns_Expected_Divisors()
         {
             int num = 6;
-            var result = num.GetAllPositiveDivisors().ToArray();
-            Assert.Contains(1, result);
-            Assert.Contains(2, result);
-            Assert.Contains(3, result);
-            Assert.Contains(6, result);
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new[] { 1, 2, 3, 6 }));
         }
 
         [Test]
         public void When_Odd_And_Positive_Returns_Expected_Divisors()
         {
             int num = 15;
-            var result = num.GetAllPositiveDivisors().ToArray();
-            Assert.Contains(1, result);
-            Assert.Contains(3, result);
-            Assert.Contains(5, result);
-            Assert.Contains(15, result);
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new[] { 1, 3, 5, 15 }));
         }
 
         [Test]
-        public void Contains_Unique_Divisors_Only()
+        public void Test_42()
+        {
+            int num = 42;
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new[] { 1, 2, 3, 6, 7, 14, 21, 42 }));
+        }
+
+        [Test]
+        public void Test_60()
+        {
+            int num = 60;
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new[] { 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60 }));
+        }
+
+        [Test]
+        public void Result_Contains_Unique_Divisors_Only()
         {
             int num = 15;
-            var result = num.GetAllPositiveDivisors();
-            Assert.AreEqual(result.Count(), result.Distinct().Count());
+            var result = GetDivisorsOf(num);
+            Assert.AreEqual(result.Length, result.Distinct().Count());
         }
+
+        private static int[] GetDivisorsOf(int num)
+        {
+            return num.GetAllPositiveDivisors().OrderBy(i => i).ToArray();
+        }
+
     }
 }

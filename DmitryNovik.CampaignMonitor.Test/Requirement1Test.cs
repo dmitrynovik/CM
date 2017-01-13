@@ -19,7 +19,7 @@ namespace DmitryNovik.CampaignMonitor.Test
         }
 
         [Test]
-        public void When_Input_IsSpace_Returns_False()
+        public void When_Input_IsBlank_Returns_False()
         {
             Assert.IsFalse(" ".IsNullOrEmpty());
         }
