@@ -7,7 +7,7 @@ namespace DmitryNovik.CampaignMonitor
     {
         public static int[] GetMostCommonElements(this int[] array)
         {
-            if (array == null) throw new ArgumentNullException("array");
+            if (array == null) throw new ArgumentNullException(nameof(array));
 
             var countedElements = array.GroupBy(a => a).Select(g => new {Count = g.Count(), Element = g.Key});
             if (countedElements.Any())

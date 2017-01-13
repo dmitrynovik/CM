@@ -8,7 +8,7 @@ namespace DmitryNovik.CampaignMonitor
         public static IEnumerable<int> GetAllPositiveDivisors(this int n)
         {
             if (n <= 0)
-                throw new ArgumentException("The input must be a positive number", "n");
+                throw new ArgumentException("The input must be a positive number", nameof(n));
 
             // 1 is always the answer (skip the modulo operation): 
             yield return 1;
