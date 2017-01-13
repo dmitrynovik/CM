@@ -9,14 +9,11 @@ namespace DmitryNovik.CampaignMonitor
         {
             if (array == null) throw new ArgumentNullException(nameof(array));
 
-            var countedElements = array.GroupBy(a => a).Select(g => new {Count = g.Count(), Element = g.Key});
-            if (countedElements.Any())
-            {
-                return countedElements.Where(g => g.Count == countedElements.Max(c => c.Count))
-                    .Select(g => g.Element)
-                    .ToArray();
-            }
-            return new int[0];
+            var countedElements = array.GroupBy(a => a).Select(g => new {Count = g.Count(), Element = g.Key}).ToArray();
+
+            return countedElements.Where(g => g.Count == countedElements.Max(c => c.Count))
+                .Select(g => g.Element)
+                .ToArray();
         }
     }
 }
