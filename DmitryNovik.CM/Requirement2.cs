@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DmitryNovik.CampaignMonitor
+namespace DmitryNovik.CM.Challenge
 {
     public static class NumberExtensions
     {

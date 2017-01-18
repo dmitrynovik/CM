@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DmitryNovik.CampaignMonitor
+namespace DmitryNovik.CM.Challenge
 {
     public static class StringExtensions
     {

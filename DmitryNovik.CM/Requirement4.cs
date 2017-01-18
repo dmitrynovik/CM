@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace DmitryNovik.CampaignMonitor
+namespace DmitryNovik.CM.Challenge
 {
     public static class ArrayExtensions
     {

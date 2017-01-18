@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace DmitryNovik.CampaignMonitor.Test
+namespace DmitryNovik.CM.Challenge.Test
 {
     [TestFixture]
     public class StringExtenionsTest

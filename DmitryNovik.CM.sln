@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmitryNovik.CampaignMonitor", "DmitryNovik.CampaignMonitor\DmitryNovik.CampaignMonitor.csproj", "{6DF503B7-0226-41C6-BED3-F33E0BD72389}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmitryNovik.CM", "DmitryNovik.CM\DmitryNovik.CM.csproj", "{6DF503B7-0226-41C6-BED3-F33E0BD72389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmitryNovik.CampaignMonitor.Test", "DmitryNovik.CampaignMonitor.Test\DmitryNovik.CampaignMonitor.Test.csproj", "{5F3091AA-0E09-4F38-B316-0F0C8F4256F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmitryNovik.CM.Test", "DmitryNovik.CM.Test\DmitryNovik.CM.Test.csproj", "{5F3091AA-0E09-4F38-B316-0F0C8F4256F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmitryNovik.CampaignMonitor.JS", "DmitryNovik.CampaignMonitor.JS\DmitryNovik.CampaignMonitor.JS.csproj", "{063D0864-2CBA-44F3-9200-30961AEC9683}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmitryNovik.CM.JS", "DmitryNovik.CM.JS\DmitryNovik.CM.JS.csproj", "{063D0864-2CBA-44F3-9200-30961AEC9683}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

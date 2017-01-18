@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6DF503B7-0226-41C6-BED3-F33E0BD72389}</ProjectGuid>
+    <ProjectGuid>{5F3091AA-0E09-4F38-B316-0F0C8F4256F1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DmitryNovik.CampaignMonitor</RootNamespace>
-    <AssemblyName>DmitryNovik.CampaignMonitor</AssemblyName>
+    <RootNamespace>DmitryNovik.CampaignMonitor.Test</RootNamespace>
+    <AssemblyName>DmitryNovik.CampaignMonitor.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,20 +30,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.6.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.3.6.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Requirement4.cs" />
-    <Compile Include="Requirement2.cs" />
-    <Compile Include="Requirement1.cs" />
+    <Compile Include="Requirement4Test.cs" />
+    <Compile Include="Requirement2Test.cs" />
+    <Compile Include="Requirement1Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requirement3.cs" />
+    <Compile Include="Requirement3Test.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="SQL\Requirement9.sql" />
+    <ProjectReference Include="..\DmitryNovik.CM\DmitryNovik.CM.csproj">
+      <Project>{6df503b7-0226-41c6-bed3-f33e0bd72389}</Project>
+      <Name>DmitryNovik.CampaignMonitor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
