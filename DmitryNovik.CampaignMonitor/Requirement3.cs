@@ -2,15 +2,26 @@
 
 namespace DmitryNovik.CampaignMonitor
 {
-    public static class Triangle
+    public class Triangle
     {
-        public static double CalculateArea(int a, int b, int c)
+        public Triangle(int a, int b, int c)
         {
             Validate(a, b, c);
 
+            A = a;
+            B = b;
+            C = c;
+        }
+
+        public int A { get; set; }
+        public int B { get; set; }
+        public int C { get; set; }
+
+        public double CalculateArea()
+        {
             // see http://en.wikipedia.org/wiki/Triangle#Using_Heron.27s_formula
-            var s = (a+b+c) / (double)2;
-            return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
+            var s = (A+B+C) / (double)2;
+            return Math.Sqrt(s * (s - A) * (s - B) * (s - C));
         }
 
         private static void Validate(int a, int b, int c)
