@@ -9,7 +9,7 @@ namespace DmitryNovik.CampaignMonitor
             Validate(a, b, c);
 
             // see http://en.wikipedia.org/wiki/Triangle#Using_Heron.27s_formula
-            var s = (a+b+c) / 2;
+            var s = (a+b+c) / (double)2;
             return Math.Sqrt(s * (s - a) * (s - b) * (s - c));
         }
 

@@ -14,14 +14,14 @@ namespace DmitryNovik.CampaignMonitor
             yield return 1;
 
             // iterate till half-number in search of divisors since a divisor (except self) never greater than N / 2:
-            for (int i = 2; i <= (n / 2) + 1; ++i)
+            for (int i = 2; i <= n / 2 + 1; ++i)
             {
                 if (n % i == 0)
                     yield return i;
             }
 
-            // self is always the answer:
-            yield return n;
+            if (n > 2)
+                yield return n;
         }
     }
 }

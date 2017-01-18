@@ -26,7 +26,23 @@ namespace DmitryNovik.CampaignMonitor.Test
         {
             int num = 13;
             var result = GetDivisorsOf(num);
-            Assert.IsTrue(result.SequenceEqual(new [] {1, 13 }));
+            Assert.IsTrue(result.SequenceEqual(new[] { 1, 13 }));
+        }
+
+        [Test]
+        public void When_1_Returns_1()
+        {
+            int num = 1;
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new[] { 1 }));
+        }
+
+        [Test]
+        public void When_2_Returns_1_2()
+        {
+            int num = 2;
+            var result = GetDivisorsOf(num);
+            Assert.IsTrue(result.SequenceEqual(new[] { 1, 2 }));
         }
 
         [Test]
@@ -73,6 +89,5 @@ namespace DmitryNovik.CampaignMonitor.Test
         {
             return num.GetAllPositiveDivisors().OrderBy(i => i).ToArray();
         }
-
     }
 }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace DmitryNovik.CampaignMonitor.Test
 {
@@ -22,6 +23,13 @@ namespace DmitryNovik.CampaignMonitor.Test
         {
             var result = Triangle.CalculateArea(3, 4, 5);
             Assert.AreEqual(6, result);
+        }
+
+        [Test]
+        public void When_Triangle_IsValid_With_FloatingPoint_Edges_TheArea_Is_Calculated_Correctly()
+        {
+            var result = Triangle.CalculateArea(3, 3, 3);
+            Assert.AreEqual(3.9, Math.Round(result, 1));
         }
     }
 }
