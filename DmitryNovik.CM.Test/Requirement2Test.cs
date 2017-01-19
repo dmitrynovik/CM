@@ -87,7 +87,9 @@ namespace DmitryNovik.CM.Challenge.Test
 
         private static int[] GetDivisorsOf(int num)
         {
-            return num.GetAllPositiveDivisors().OrderBy(i => i).ToArray();
+            var result = num.GetAllPositiveDivisors().OrderBy(i => i).ToArray();
+            Console.WriteLine(string.Join(",", result));
+            return result;
         }
     }
 }

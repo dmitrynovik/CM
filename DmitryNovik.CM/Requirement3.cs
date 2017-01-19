@@ -20,7 +20,7 @@ namespace DmitryNovik.CM.Challenge
         public double CalculateArea()
         {
             // see http://en.wikipedia.org/wiki/Triangle#Using_Heron.27s_formula
-            var s = (A+B+C) / (double)2;
+            var s = (A+B+C) / 2.0;
             return Math.Sqrt(s * (s - A) * (s - B) * (s - C));
         }
 
