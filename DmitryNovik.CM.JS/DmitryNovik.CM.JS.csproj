@@ -7,8 +7,8 @@
     <ProjectGuid>{063D0864-2CBA-44F3-9200-30961AEC9683}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DmitryNovik.CampaignMonitor.JS</RootNamespace>
-    <AssemblyName>DmitryNovik.CampaignMonitor.JS</AssemblyName>
+    <RootNamespace>DmitryNovik.CM.JS</RootNamespace>
+    <AssemblyName>DmitryNovik.CM.JS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
